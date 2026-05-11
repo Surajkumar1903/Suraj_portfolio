@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Suraj Kumar - Website Developer, AI & ML Enthusiast, BCA Student. Explore my portfolio, projects, and certifications." />
+  <title>Suraj Kumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Suraj<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home <span class="nav-arrow">›</span></a></li>
+        <li><a href="#about" class="nav-link">About <span class="nav-arrow">›</span></a></li>
+        <li><a href="#skills" class="nav-link">Skills <span class="nav-arrow">›</span></a></li>
+        <li><a href="#projects" class="nav-link">Projects <span class="nav-arrow">›</span></a></li>
+        <li><a href="#certifications" class="nav-link">Certs <span class="nav-arrow">›</span></a></li>
+        <li><a href="#coding-profiles" class="nav-link">Profiles <span class="nav-arrow">›</span></a></li>
+        <li><a href="#contact" class="nav-link">Contact <span class="nav-arrow">›</span></a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#home" class="mob-nav-item active" data-section="home">
+      <div class="mob-nav-icon"><i class="fas fa-house"></i></div>
+      <span>Home</span>
+    </a>
+    <a href="#about" class="mob-nav-item" data-section="about">
+      <div class="mob-nav-icon"><i class="fas fa-user"></i></div>
+      <span>About</span>
+    </a>
+    <a href="#projects" class="mob-nav-item" data-section="projects">
+      <div class="mob-nav-icon"><i class="fas fa-code"></i></div>
+      <span>Projects</span>
+    </a>
+    <a href="#certifications" class="mob-nav-item" data-section="certifications">
+      <div class="mob-nav-icon"><i class="fas fa-certificate"></i></div>
+      <span>Certs</span>
+    </a>
+    <a href="#contact" class="mob-nav-item" data-section="contact">
+      <div class="mob-nav-icon"><i class="fas fa-paper-plane"></i></div>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <!-- Background -->
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-lines"></div>
+
+    <!-- Left Content -->
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+
+      <h1 class="hero-name">
+        <span class="name-line">Hi, I'm</span>
+        <span class="name-highlight">Suraj Kumar</span>
+      </h1>
+
+      <div class="hero-title">
+        <span class="title-prefix">&gt;&nbsp;</span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-description">
+        Passionate about crafting seamless web experiences and exploring the frontiers of AI &amp; ML. Currently pursuing BCA at Jagannath University.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">35+</span>
+          <span class="hero-stat-label">Certifications</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3+</span>
+          <span class="hero-stat-label">Projects</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">14+</span>
+          <span class="hero-stat-label">Skills</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary" id="viewProjectsBtn">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="resume.pdf" class="btn btn-secondary" id="downloadResumeBtn" download>
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <a href="#contact" class="btn btn-outline" id="contactBtn">
+          <i class="fas fa-paper-plane"></i> Contact
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/Surajkumar1903" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/surajkumar1903" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.naukri.com/code360/profile/surajwebstudio" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Code360"><i class="fas fa-code"></i></a>
+        <a href="mailto:surajkumar@email.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Right: Photo -->
+    <div class="hero-visual">
+      <div class="hero-photo-wrap" id="heroCard">
+        <div class="photo-ring photo-ring-1"></div>
+        <div class="photo-ring photo-ring-2"></div>
+        <div class="photo-ring photo-ring-3"></div>
+        <div class="photo-glow"></div>
+        <div class="photo-frame">
+          <img src="Manage your Headshots and Profiles _ InstaHeadsho.pdf.png" alt="Suraj Kumar" class="hero-photo" />
+        </div>
+        <div class="hero-chip chip-1"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="hero-chip chip-2"><i class="fab fa-python"></i> Python</div>
+        <div class="hero-chip chip-3"><i class="fas fa-brain"></i> AI / ML</div>
+        <div class="hero-chip chip-4"><i class="fab fa-js"></i> JavaScript</div>
+        <div class="hero-status-badge">
+          <span class="badge-dot"></span> Open to Work
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title">About <span class="glow-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+
+        <!-- Left: Photo + decorative elements -->
+        <div class="about-visual reveal">
+          <div class="about-photo-container">
+            <!-- Decorative corner accents -->
+            <div class="about-corner about-corner-tl"></div>
+            <div class="about-corner about-corner-br"></div>
+            <!-- Glow -->
+            <div class="about-photo-glow"></div>
+            <!-- Photo -->
+            <div class="about-photo-frame">
+              <img src="Manage your Headshots and Profiles _ InstaHeadsho.pdf.png" alt="Suraj Kumar" class="about-photo" />
+            </div>
+            <!-- Floating info cards -->
+            <div class="about-float-card afc-1">
+              <i class="fas fa-certificate"></i>
+              <div>
+                <span class="afc-num">35+</span>
+                <span class="afc-label">Certifications</span>
+              </div>
+            </div>
+            <div class="about-float-card afc-2">
+              <i class="fas fa-code"></i>
+              <div>
+                <span class="afc-num">14+</span>
+                <span class="afc-label">Skills</span>
+              </div>
+            </div>
+            <!-- Experience badge -->
+            <div class="about-exp-badge">
+              <div class="exp-ring"></div>
+              <span class="exp-text">BCA<br/><small>Student</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="about-content reveal">
+
+          <div class="about-tag">// about_me</div>
+          <h3 class="about-greeting">Hey there! <span class="wave">👋</span></h3>
+          <p class="about-text">I'm <strong>Suraj Kumar</strong>, a passionate <span class="highlight">Website Developer</span> and <span class="highlight">AI &amp; ML Enthusiast</span> currently pursuing my <span class="highlight">BCA from Jagannath University</span>.</p>
+          <p class="about-text">I love building stunning, functional web experiences and constantly exploring the exciting world of Artificial Intelligence and Machine Learning. With <strong>35+ certifications</strong> from top platforms like Google, Microsoft, IBM, and more, I'm always leveling up my skills.</p>
+
+          <!-- Info cards -->
+          <div class="about-info-grid">
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div><strong>Education</strong><span>BCA - Jagannath University</span></div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Location</strong><span>India</span></div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-laptop-code"></i></div>
+              <div><strong>Focus</strong><span>Web Dev &amp; AI/ML</span></div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fas fa-certificate"></i></div>
+              <div><strong>Certifications</strong><span>35+ &amp; Counting</span></div>
+            </div>
+          </div>
+
+          <!-- Skill bars -->
+          <div class="skill-bars">
+            <h4>Core Competencies</h4>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Web Development</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Python &amp; AI/ML</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Database Management</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Cloud Computing</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// tech_stack</span>
+        <h2 class="section-title">My <span class="glow-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Skills cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// my_work</span>
+        <h2 class="section-title">Featured <span class="glow-text">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal" id="project1">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-id-card"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="project-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Citizen Unique ID (Aadhaar) Management System</h3>
+            <p class="project-desc">Secure citizen data management system developed as a BCA academic project using PHP and MySQL. Features authentication, CRUD operations, and data validation.</p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </div>
+        <div class="project-card reveal" id="project2">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="project-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">CODIFY Portfolio Website</h3>
+            <p class="project-desc">Modern responsive portfolio website with smooth animations, clean UI, and glassmorphism design. Showcases projects, skills, and certifications in a premium layout.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">GSAP</span>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </div>
+        <div class="project-card reveal" id="project3">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-globe"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="project-link" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Responsive Web Pages</h3>
+            <p class="project-desc">A collection of responsive and interactive web pages designed with modern UI principles. Includes landing pages, forms, and UI components with smooth animations.</p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive</span>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// achievements</span>
+        <h2 class="section-title">📜 <span class="glow-text">Certifications</span></h2>
+        <div class="cert-counter reveal">
+          <div class="counter-badge">
+            <span class="counter-num" data-target="35">0</span>
+            <span>+</span>
+          </div>
+          <span class="counter-label">Certifications Earned</span>
+        </div>
+      </div>
+      <div class="cert-orgs reveal">
+        <div class="cert-orgs-track">
+          <div class="org-badge"><i class="fab fa-google"></i> Google</div>
+          <div class="org-badge"><i class="fab fa-microsoft"></i> Microsoft</div>
+          <div class="org-badge"><i class="fas fa-brain"></i> IBM</div>
+          <div class="org-badge"><i class="fas fa-university"></i> Duke University</div>
+          <div class="org-badge"><i class="fas fa-graduation-cap"></i> DeepLearning.AI</div>
+          <div class="org-badge"><i class="fas fa-building"></i> Deloitte</div>
+          <div class="org-badge"><i class="fas fa-university"></i> IIT Bombay</div>
+          <div class="org-badge"><i class="fas fa-certificate"></i> SAP</div>
+          <div class="org-badge"><i class="fas fa-university"></i> UPenn</div>
+          <div class="org-badge"><i class="fas fa-code"></i> Scrimba</div>
+          <!-- duplicate for seamless loop -->
+          <div class="org-badge"><i class="fab fa-google"></i> Google</div>
+          <div class="org-badge"><i class="fab fa-microsoft"></i> Microsoft</div>
+          <div class="org-badge"><i class="fas fa-brain"></i> IBM</div>
+          <div class="org-badge"><i class="fas fa-university"></i> Duke University</div>
+          <div class="org-badge"><i class="fas fa-graduation-cap"></i> DeepLearning.AI</div>
+          <div class="org-badge"><i class="fas fa-building"></i> Deloitte</div>
+          <div class="org-badge"><i class="fas fa-university"></i> IIT Bombay</div>
+          <div class="org-badge"><i class="fas fa-certificate"></i> SAP</div>
+          <div class="org-badge"><i class="fas fa-university"></i> UPenn</div>
+          <div class="org-badge"><i class="fas fa-code"></i> Scrimba</div>
+        </div>
+      </div>
+      <div class="certs-grid" id="certsGrid">
+        <!-- Cert cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Coding Profiles Section -->
+  <section class="section profiles-section" id="coding-profiles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// coding_platforms</span>
+        <h2 class="section-title">Coding <span class="glow-text">Profiles</span></h2>
+      </div>
+      <div class="profiles-grid" id="profilesGrid">
+        <!-- Profile cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// get_in_touch</span>
+        <h2 class="section-title">Contact <span class="glow-text">Me</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Build Something Amazing Together!</h3>
+          <p>Whether you have a project in mind, an opportunity to share, or just want to connect — my inbox is always open.</p>
+          <div class="contact-items">
+            <a href="mailto:surajkumar@email.com" class="contact-item" id="emailLink">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email</strong><span>surajkumar@email.com</span></div>
+            </a>
+            <a href="https://github.com/Surajkumar1903" target="_blank" class="contact-item" id="githubLink">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div><strong>GitHub</strong><span>@Surajkumar1903</span></div>
+            </a>
+            <a href="https://www.naukri.com/code360/profile/surajwebstudio" target="_blank" class="contact-item" id="code360Link">
+              <div class="contact-icon"><i class="fas fa-code"></i></div>
+              <div><strong>Code360</strong><span>surajwebstudio</span></div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Your Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="Project Collaboration" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitContactBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Suraj<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Code • Create • Innovate 🚀</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Surajkumar1903" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.naukri.com/code360/profile/surajwebstudio" target="_blank" class="social-link" aria-label="Code360"><i class="fas fa-code"></i></a>
+          <a href="mailto:surajkumar@email.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/surajkumar1903" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="footer-copy">© 2025 Suraj Kumar. Crafted with <span class="heart">❤️</span> & lots of ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
